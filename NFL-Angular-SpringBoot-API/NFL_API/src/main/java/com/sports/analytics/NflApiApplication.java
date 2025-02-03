@@ -14,3 +14,4 @@ public class NflApiApplication {
 // GET ALL PLAYERS: http://localhost:8080/players
 // GET ALL QBs: http://localhost:8080/players/position?position=QB
 // GET PSU PLAYERS: http://localhost:8080/players/college?college=Penn%20State
+// GET PSU WR PLAYERS: http://localhost:8080/players/filter?position=WR&college=Penn%20State

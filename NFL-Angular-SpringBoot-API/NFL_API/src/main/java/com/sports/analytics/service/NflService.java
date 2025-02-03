@@ -58,4 +58,18 @@ public class NflService {
         }
         return result;
     }
+
+    // ✅ New Method: Find players by both position and college
+    public List<Player> findPlayersByFilters(List<Player> players, String position, String college) {
+        List<Player> result = new ArrayList<>();
+        for (Player player : players) {
+            boolean matchesPosition = (position == null || position.isEmpty()) || player.getPosition().equalsIgnoreCase(position);
+            boolean matchesCollege = (college == null || college.isEmpty()) || player.getCollegeName().equalsIgnoreCase(college);
+
+            if (matchesPosition && matchesCollege) {
+                result.add(player);
+            }
+        }
+        return result;
+    }
 }
